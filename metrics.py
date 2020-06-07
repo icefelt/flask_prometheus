@@ -8,4 +8,4 @@ def Counter(name):
 
     counter = Counter(__name__)
 
-    coutner +=1
+    counter +=1
