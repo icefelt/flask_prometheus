@@ -1,4 +1,4 @@
-# Application Monitoring with Flask and Prometheus wth Python
+# Application Monitoring with Flask and Prometheus using Python
 This python code will setup Prometheus using the Flask framework. This code creates three URL's. One URL is for the prometheus backed Flash application. The second URL is designed to fake a long database query we can monitor. The third URL displays our application metrics. 
 
 To run this code, clone the repo locall and run this command
