@@ -29,9 +29,6 @@ TIMER = Histogram(
     ['endpoint']
 )
 
-import time
-import random
-
 @app.route('/database/')
 def database():
     with TIMER.labels('/database').time():
@@ -39,8 +36,6 @@ def database():
     return '<h1>Completed expensive database operation</h1>'
 
 from prometheus_client import start_http_server, Summary
-import random
-import time
 
 # Create a metric to track time spent and requests made.
 REQUEST_TIME = Summary('request_processing_seconds', 'Time spent processing request')
