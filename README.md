@@ -40,7 +40,7 @@ The number of slow database requests as determined by http://127.0.0.1:5000/data
 slow_count{endpoint="/database"} 6.0
 ```
 
-
+---------------------------------------------------------------------
 
 This code is taken from the _Monitoring and Logging_ chapter of the 'Python for Devops' book by Noah Gift, Kennedy Behrman, Alfredo Deza, and Grig Gheorghiu. 
 
