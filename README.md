@@ -27,6 +27,7 @@ $ FLASK_APP=web.py flask run
  ```
 
 **Upon success, navigate your web browser to three URL's in this order to validate**
+
 http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
 
 http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
