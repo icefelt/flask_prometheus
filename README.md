@@ -1,16 +1,21 @@
-# Using Python for Application Monitoring with Flask and Prometheus
-This python code will setup three URL's
+# Application Monitoring examples with Python using Graphite and StatsD for push services and Prometheus for pull services
 
+This application creates a Flask web application and three URL's. We used `'prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. In this file, We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request. 
 
+**The first URL the prometheus-backed flask application**
+http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
 
-This python code will setup Prometheus using the Flask framework. This code creates three URL's. One URL is for the prometheus-backed Flash application. The second URL is designed to fake a long database query we can monitor. The third URL displays our application metrics.
+**The second URL is designed to fake a long database query we can monitor**
+http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
+
+**The third URL displays our application metrics**
+http://127.0.0.1:5000/metrics/ - Displays list of application metrics
 
 To run this code, clone the repo locally and run this command
 ```bash
 FLASK_APP=web.py flask run
 ```
-
-Expected output
+The expected output includes
 ```bash
 $ FLASK_APP=web.py flask run
  * Serving Flask app "web.py"
@@ -21,7 +26,7 @@ $ FLASK_APP=web.py flask run
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  ```
 
-Upon success, you should be able to see navigate your web browser to three URL's.
+Upon success, navigate your web browser to three URL's in this order to validate
 
 http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
 
