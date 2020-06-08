@@ -34,9 +34,12 @@ http://127.0.0.1:5000/database/ - Displays `Completed expensive database operati
 
 http://127.0.0.1:5000/metrics/ - Displays list of application metrics
 
-To validate the metrics, navigate to the base URL (http://127.0.0.1:5000/) and the database page (http://127.0.0.1:5000/database).
+To validate the metrics, 
+1. navigate to the base URL (http://127.0.0.1:5000/) 
+2. navigate to the database page (http://127.0.0.1:5000/database)
+3. navigate to the metrics page (http://127.0.0.1:5000/metrics) 
 
-The metrics page should now include both
+The metrics page should now include both `total number of requests` and `number of slow database requests`
 
 **The total number of requests** on http://127.0.0.1:5000/
 ```
