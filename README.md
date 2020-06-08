@@ -11,11 +11,11 @@ http://127.0.0.1:5000/database/ - Displays `Completed expensive database operati
 **The third URL displays our application metrics**
 http://127.0.0.1:5000/metrics/ - Displays list of application metrics
 
-To run this code, clone the repo locally and run this command
+**To run this code, clone the repo locally and run this command**
 ```bash
 FLASK_APP=web.py flask run
 ```
-The expected output includes
+**The expected output includes**
 ```bash
 $ FLASK_APP=web.py flask run
  * Serving Flask app "web.py"
@@ -26,8 +26,7 @@ $ FLASK_APP=web.py flask run
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  ```
 
-Upon success, navigate your web browser to three URL's in this order to validate
-
+**Upon success, navigate your web browser to three URL's in this order to validate**
 http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
 
 http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
