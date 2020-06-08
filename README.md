@@ -1,6 +1,6 @@
 # Application Monitoring examples with Python using Graphite and StatsD for push services and Prometheus for pull services
 
-This application creates a Flask web application and three URL's. We used `'prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. In this file, We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request. 
+This application creates a Flask web application and three URL's. We used `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. In this file, We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request. 
 
 **The first URL the prometheus-backed flask application**
 http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
