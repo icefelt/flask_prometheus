@@ -1,6 +1,6 @@
-# Application Monitoring examples with Python using Graphite and StatsD for push services and Prometheus for pull services
+# Python Application Monitoring examples using Graphite and StatsD for push services and Prometheus for pull services
 
-This application creates a Flask web application and three URL's. We used `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. In this file, We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
+This application uses python to create a Flask web application and three URL's. We used `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. In this file, We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
 
 **The first URL the prometheus-backed flask application**
 http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
@@ -11,11 +11,11 @@ http://127.0.0.1:5000/database/ - Displays `Completed expensive database operati
 **The third URL displays our application metrics**
 http://127.0.0.1:5000/metrics/ - Displays list of application metrics
 
-To run this code, clone the repo locally and run this command
+**To run this code, clone the repo locally and run this command**
 ```bash
 FLASK_APP=web.py flask run
 ```
-The expected output includes
+**The expected output includes**
 ```bash
 $ FLASK_APP=web.py flask run
  * Serving Flask app "web.py"
@@ -26,7 +26,7 @@ $ FLASK_APP=web.py flask run
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  ```
 
-Upon success, navigate your web browser to three URL's in this order to validate
+**Upon success, navigate your web browser to three URL's in this order to validate**
 
 http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
 
@@ -34,9 +34,12 @@ http://127.0.0.1:5000/database/ - Displays `Completed expensive database operati
 
 http://127.0.0.1:5000/metrics/ - Displays list of application metrics
 
-To validate the metrics, navigate to the base URL (http://127.0.0.1:5000/) and the database page (http://127.0.0.1:5000/database).
+To validate the metrics,
+1. navigate to the base URL (http://127.0.0.1:5000/)
+2. navigate to the database page (http://127.0.0.1:5000/database)
+3. navigate to the metrics page (http://127.0.0.1:5000/metrics)
 
-The metrics page should now include both
+The metrics page should now include both `total number of requests` and `number of slow database requests`
 
 **The total number of requests** on http://127.0.0.1:5000/
 ```
