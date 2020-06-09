@@ -4,7 +4,7 @@ How do you know your application is running?
 
 How do you know your application is running at peak performance?
 
-How do you know your application is running at peak performance without wasting money on unecessary infrastructure or costs?
+How do you know your application is running at peak performance without wasting money on unnecessary infrastructure or costs?
 
 **Application monitoring** can answer these questions. With good monitoring, you can also analyze long-term trends, compare over time or experiment groups, and build the foundation for alerts and dashboards.  
 
