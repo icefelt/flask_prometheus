@@ -17,7 +17,7 @@ Answering **What** is broken and **why?** maps to **Symptoms** versus **Cause**.
 |400 or 500 errors | Database severs are refusing connections|
 |application response times slow | AWS SNS queue is not decreasing fast enough |
 
-When choosing `application metrics`, I use **The Four Golden Signals** as baseline for confidence my service or application has enough coverage. 
+When choosing `application metrics`, I use **The Four Golden Signals** as baseline for confidence my service or application has enough coverage.
 https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/
 **Latency** is the time is takes to service a request.
 **Traffic** is a measure of how much demand is being placed on your system
@@ -32,16 +32,6 @@ There are two main paradigms most monitoring services belong. These are services
 Graphite does not collect data. StatsD pushes the metrics via TCP or UDP, and Python has instrumentation options that allow us to aggregrate metrics over UDP and ship them to graphite.
 
 **Prometheus is a great choice for short-lived data or data that frequently changes; whereas Graphite is better suited for long-term historical information.**
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -106,10 +96,6 @@ slow_count{endpoint="/database"} 6.0
 ```
 
 ---------------------------------------------------------------------
-
-This code is taken from the _Monitoring and Logging_ chapter of the 'Python for Devops' book by Noah Gift, Kennedy Behrman, Alfredo Deza, and Grig Gheorghiu.
-
-
 This is code is from _Monitoring and Logging_ Chapter of the 'Python for Devops' book by Noah Gift, Kennedy Behrman, Alfredo Deza, and Grig Gheorghiu.
 You can buy this book on Amazon here: https://www.amazon.com/Python-DevOps-Ruthlessly-Effective-Automation/dp/149205769X
 
