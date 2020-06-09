@@ -8,7 +8,7 @@ How do you know your application is running at peak performance without wasting 
 
 **Application monitoring** using `application metrics` can answer these questions. With good monitoring, you can also analyze long-term trends, compare over time or experiment groups, and build the foundation for alerts and dashboards. With good monitoring, visualization, alerts, and logging, you'll know the health of your application quickly through a dashboard, receive a page when it's not healthy, or troubleshooting through the logs to 
 
-When choosing `application metrics`, using [**The Four Golden Signals**](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/) is a baseline for confidence my service or application has enough coverage.
+When choosing `application metrics`, using [**The Four Golden Signals**](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/) From [Google's SRE Book](https://landing.google.com/sre/sre-book/toc/index.html) is a baseline for confidence my service or application has enough coverage.
 
 **Latency** is the time is takes to service a request.
 
