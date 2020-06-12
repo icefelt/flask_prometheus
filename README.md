@@ -1,20 +1,13 @@
 # Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)
 
-This Python code should create three URL's on your local machine using flask. This code should also
+### Purpose
 
+This Python code should create three URL's on your local machine using flask. This code should also
 
 This Python code creates a [Flask](https://palletsprojects.com/p/flask/) web application with three routes or URL's.
 1. http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
 1. http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
 1. http://127.0.0.1:5000/metrics/ - Displays list of application metrics
-
-
-The URL's are 1) the base URL `/`, 2) a `/database/` route, and 3) a `/metrics/` route. More specifically, we use the Prometheus instrumentation library for Python `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
-
-Counter, Gauge, Summary and Histogram.
-Daemon for easy but powerful stats aggregation
-
-
 
 ### Install
 
@@ -35,6 +28,22 @@ remote: Total 1364 (delta 154), reused 1307 (delta 114), pack-reused 0
 Receiving objects: 100% (1364/1364), 4.22 MiB | 3.88 MiB/s, done.
 Resolving deltas: 100% (154/154), done.
 ```
+
+
+
+
+
+
+
+
+e use the Prometheus instrumentation library for Python `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
+
+Counter, Gauge, Summary and Histogram.
+Daemon for easy but powerful stats aggregation
+
+
+
+
 
 **To run this code, clone the repo locally and run this command**
 ```bash
