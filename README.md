@@ -7,7 +7,7 @@
 This Python code creates a [Flask](https://palletsprojects.com/p/flask/) web application with three routes or URL's.
 1. http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
 1. http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
-1. http://127.0.0.1:5000/metrics/ - Displays list of application metrics, liek `total number of requests` and `number of slow database requests`
+1. http://127.0.0.1:5000/metrics/ - Displays list of application metrics, like `total number of requests` and `number of slow database requests`
 
 This code also uses `python-statsd` [StatsD](https://github.com/statsd/statsd) to push application metrics to [Graphite](https://graphiteapp.org/). 
 
