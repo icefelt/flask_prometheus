@@ -1,4 +1,4 @@
-# Python Application Monitoring examples using Graphite and StatsD for push services and Prometheus for pull services
+# Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)
 
 
 // Project name
@@ -43,25 +43,24 @@ How do you know your application is running at peak performance?
 
 How do you know your application is running at peak performance without wasting money on unnecessary infrastructure or costs?
 
-**Application monitoring** can answer these questions. With good monitoring, you can also analyze long-term trends, compare over time or experiment groups, and build the foundation for alerts and dashboards.  
+**Application monitoring** using `application metrics` can answer these questions. With good monitoring, you can also analyze long-term trends, compare over time or experiment groups, and build the foundation for alerts and dashboards. With good monitoring, visualization, alerts, and logging, you'll know the health of your application quickly through a dashboard, receive a page when it's not healthy, or troubleshooting through the logs to 
 
-With good monitoring, alerts, visualization, and logging, you'll know the health of your application.
+When choosing `application metrics`, using [**The Four Golden Signals**](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/) From [Google's SRE Book](https://landing.google.com/sre/sre-book/toc/index.html) is a baseline for confidence my service or application has enough coverage.
 
-Answering **What** is broken and **why?** maps to **Symptoms** versus **Cause**.
+**Latency** is the time is takes to service a request.
 
-| What (Symptoms)| Why (Cause)|
+**Traffic** is a measure of how much demand is being placed on your system
+
+**Errors** is rate of requests that fail, either explicitly (e.g., HTTP 500s), implicitly (for example, an HTTP 200 success response, but coupled with the wrong content), or by policy (for example, "If you committed to one-second response times, any request over one second is an error").
+
+**Saturation** is a measure of how "full" your system is. A measure of your system fraction, emphasizing the resources that are most constrained (e.g., in a memory-constrained system, show memory; in an I/O-constrained system, show I/O).
+
+Answering **What** is broken and **Why** maps to **Symptoms** versus **Cause**.
+
+| **What** (Symptoms)| **Why** (Cause)|
 |------|------|
 |400 or 500 errors | Database severs are refusing connections|
 |application response times slow | AWS SNS queue is not decreasing fast enough |
-
-When choosing `application metrics`, I use **The Four Golden Signals** as baseline for confidence my service or application has enough coverage.
-https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/
-**Latency** is the time is takes to service a request.
-**Traffic** is a measure of how much demand is being placed on your system
-**Errors** is rate of requests that fail, either explicitly (e.g., HTTP 500s), implicitly (for example, an HTTP 200 success response, but coupled with the wrong content), or by policy (for example, "If you committed to one-second response times, any request over one second is an error").
-**Saturation** is a measure of how "full" your system is. A measure of your system fraction, emphasizing the resources that are most constrained (e.g., in a memory-constrained system, show memory; in an I/O-constrained system, show I/O).
-
-In this example, we'd like to explore an example for push and for pull.
 
 
 There are two main paradigms most monitoring services belong. These are services that either pull or push. Knowing whether pull or push is a better choice for a particluar situation is valuable. Noah et al. have examples with **Graphite and StatsD for Push** and **Prometheus for Pull.**
