@@ -1,5 +1,51 @@
 # Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)
 
+**To run this code, clone the repo locally and run this command**
+```bash
+FLASK_APP=web.py flask run
+```
+**The expected output includes**
+```bash
+$ FLASK_APP=web.py flask run
+ * Serving Flask app "web.py"
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ ```
+
+**Upon success, navigate your web browser to three URL's in this order to validate**
+
+http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
+
+http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
+
+http://127.0.0.1:5000/metrics/ - Displays list of application metrics
+
+To validate the metrics,
+1. navigate to the base URL (http://127.0.0.1:5000/)
+2. navigate to the database page (http://127.0.0.1:5000/database)
+3. navigate to the metrics page (http://127.0.0.1:5000/metrics)
+
+The metrics page should now include both `total number of requests` and `number of slow database requests`
+
+**The total number of requests** on http://127.0.0.1:5000/
+```
+# TYPE requests_total counter
+requests_total{endpoint="/"} 20.0
+```
+**The number of slow database requests** as determined by http://127.0.0.1:5000/database/
+```
+# TYPE slow histogram
+slow_count{endpoint="/database"} 6.0
+```
+
+---------------------------------------------------------------------
+
+
+
+
 
 // Project name
 // Project description
@@ -43,7 +89,7 @@ How do you know your application is running at peak performance?
 
 How do you know your application is running at peak performance without wasting money on unnecessary infrastructure or costs?
 
-**Application monitoring** using `application metrics` can answer these questions. With good monitoring, you can also analyze long-term trends, compare over time or experiment groups, and build the foundation for alerts and dashboards. With good monitoring, visualization, alerts, and logging, you'll know the health of your application quickly through a dashboard, receive a page when it's not healthy, or troubleshooting through the logs to 
+**Application monitoring** using `application metrics` can answer these questions. With good monitoring, you can also analyze long-term trends, compare over time or experiment groups, and build the foundation for alerts and dashboards. With good monitoring, visualization, alerts, and logging, you'll know the health of your application quickly through a dashboard, receive a page when it's not healthy, or troubleshooting through the logs to
 
 When choosing `application metrics`, using [**The Four Golden Signals**](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/) From [Google's SRE Book](https://landing.google.com/sre/sre-book/toc/index.html) is a baseline for confidence my service or application has enough coverage.
 
@@ -100,48 +146,6 @@ http://127.0.0.1:5000/database/ - Displays `Completed expensive database operati
 **The third URL displays our application metrics**
 http://127.0.0.1:5000/metrics/ - Displays list of application metrics
 
-**To run this code, clone the repo locally and run this command**
-```bash
-FLASK_APP=web.py flask run
-```
-**The expected output includes**
-```bash
-$ FLASK_APP=web.py flask run
- * Serving Flask app "web.py"
- * Environment: production
-   WARNING: Do not use the development server in a production environment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
- ```
-
-**Upon success, navigate your web browser to three URL's in this order to validate**
-
-http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
-
-http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
-
-http://127.0.0.1:5000/metrics/ - Displays list of application metrics
-
-To validate the metrics,
-1. navigate to the base URL (http://127.0.0.1:5000/)
-2. navigate to the database page (http://127.0.0.1:5000/database)
-3. navigate to the metrics page (http://127.0.0.1:5000/metrics)
-
-The metrics page should now include both `total number of requests` and `number of slow database requests`
-
-**The total number of requests** on http://127.0.0.1:5000/
-```
-# TYPE requests_total counter
-requests_total{endpoint="/"} 20.0
-```
-**The number of slow database requests** as determined by http://127.0.0.1:5000/database/
-```
-# TYPE slow histogram
-slow_count{endpoint="/database"} 6.0
-```
-
----------------------------------------------------------------------
 
 How do you know your application is running?
 
