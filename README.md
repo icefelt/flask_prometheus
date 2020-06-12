@@ -1,4 +1,6 @@
-# Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)
+# ->Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)<-
+
+---------------------------------------------------------------------
 
 ### Purpose
 
@@ -9,14 +11,18 @@ This Python code creates a [Flask](https://palletsprojects.com/p/flask/) web app
 1. http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
 1. http://127.0.0.1:5000/metrics/ - Displays list of application metrics
 
+---------------------------------------------------------------------
+
 ### Install
 
-Clone the code repo to your local machine and enter the directory you created with this command
+** To install this code, clone [the repo](https://github.com/icefelt/python_prometheus_graphite_examples) locally and enter the directory you created.
 ```bash
 $ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
 ```
 
-Expected Output
+---------------------------------------------------------------------
+
+**Expected Output**
 ```bash
 $ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
 Cloning into 'python_prometheus_graphite_examples'...
@@ -29,23 +35,9 @@ Receiving objects: 100% (1364/1364), 4.22 MiB | 3.88 MiB/s, done.
 Resolving deltas: 100% (154/154), done.
 ```
 
+---------------------------------------------------------------------
 
-
-
-
-
-
-
-e use the Prometheus instrumentation library for Python `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
-
-Counter, Gauge, Summary and Histogram.
-Daemon for easy but powerful stats aggregation
-
-
-
-
-
-**To run this code, clone the repo locally and run this command**
+**To run this code, clone [the repo](https://github.com/icefelt/python_prometheus_graphite_examples) locally and run this command**
 ```bash
 $ FLASK_APP=web.py flask run
 ```
@@ -60,7 +52,7 @@ $ FLASK_APP=web.py flask run
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  ```
 
-**Upon success, navigate your web browser to three URL's in this order to validate**
+**Upon successful installation, navigate your web browser to three URL's to validate**
 
 http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
 
@@ -88,14 +80,10 @@ slow_count{endpoint="/database"} 6.0
 
 ---------------------------------------------------------------------
 
+We use the Prometheus instrumentation library for Python `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
 
-
-
-How do you know your application is running?
-
-How do you know your application is running at peak performance?
-
-How do you know your application is running at peak performance without wasting money on unnecessary infrastructure or costs?
+Counter, Gauge, Summary and Histogram.
+Daemon for easy but powerful stats aggregation
 
 **Application monitoring** using `application metrics` can answer these questions. With good monitoring, you can also analyze long-term trends, compare over time or experiment groups, and build the foundation for alerts and dashboards. With good monitoring, visualization, alerts, and logging, you'll know the health of your application quickly through a dashboard, receive a page when it's not healthy, or troubleshooting through the logs to
 
