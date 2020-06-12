@@ -4,7 +4,10 @@ Clone
 
 ### Install
 
-Clone the code repo to your local machine and enter the directory you created.
+Clone the code repo to your local machine and enter the directory you created with this command
+```bash
+$ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
+```
 
 ```bash
 $ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
@@ -20,7 +23,7 @@ Resolving deltas: 100% (154/154), done.
 
 **To run this code, clone the repo locally and run this command**
 ```bash
-FLASK_APP=web.py flask run
+$ FLASK_APP=web.py flask run
 ```
 **The expected output includes**
 ```bash
