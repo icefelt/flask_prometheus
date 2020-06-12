@@ -3,7 +3,7 @@
 This Python code should create three URL's on your local machine using flask. This code should also
 
 
-This Python code creates a Flask web application and three routes or URL's. The URL's are 1) the base URL `/`, 2) a `/database/` route, and 3) a `/metrics/` route. More specifically, we use the Prometheus instrumentation library for Python `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
+This Python code creates a [Flask](https://palletsprojects.com/p/flask/) web application and three routes or URL's. The URL's are 1) the base URL `/`, 2) a `/database/` route, and 3) a `/metrics/` route. More specifically, we use the Prometheus instrumentation library for Python `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
 
 Counter, Gauge, Summary and Histogram.
 Daemon for easy but powerful stats aggregation
