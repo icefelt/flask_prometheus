@@ -15,7 +15,7 @@ This Python code creates a [Flask](https://palletsprojects.com/p/flask/) web app
 
 ### Install
 
-** To install this code, clone [the repo](https://github.com/icefelt/python_prometheus_graphite_examples) locally and enter the directory you created.
+**To install this code, clone [the repo](https://github.com/icefelt/python_prometheus_graphite_examples) locally and enter the directory you created.**
 ```bash
 $ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
 ```
