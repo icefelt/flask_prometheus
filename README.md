@@ -4,11 +4,19 @@ Clone
 
 ### Install
 
-Clone the code repo to your local machine and enter the directory you created. 
+Clone the code repo to your local machine and enter the directory you created.
 
-`git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
-
-
+```bash
+$ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
+Cloning into 'python_prometheus_graphite_examples'...
+Warning: Permanently added the RSA host key for IP address '140.82.113.3' to the list of known hosts.
+remote: Enumerating objects: 1364, done.
+remote: Counting objects: 100% (1364/1364), done.
+remote: Compressing objects: 100% (1232/1232), done.
+remote: Total 1364 (delta 154), reused 1307 (delta 114), pack-reused 0
+Receiving objects: 100% (1364/1364), 4.22 MiB | 3.88 MiB/s, done.
+Resolving deltas: 100% (154/154), done.
+```
 
 **To run this code, clone the repo locally and run this command**
 ```bash
