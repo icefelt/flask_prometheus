@@ -17,7 +17,7 @@ This code also uses [StatsD](https://github.com/statsd/statsd) to push applicati
 
 **To install this code, clone [the repo](https://github.com/icefelt/python_prometheus_graphite_examples) locally and enter the directory you created.**
 ```bash
-$ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
+$ git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples
 ```
 
 ---------------------------------------------------------------------
