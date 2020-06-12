@@ -1,6 +1,14 @@
 # Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)
 
-Clone
+This Python code should create three URL's on your local machine using flask. This code should also
+
+
+This Python code creates a Flask web application and three routes or URL's. The URL's are 1) the base URL `/`, 2) a `/database/` route, and 3) a `/metrics/` route. More specifically, we use the Prometheus instrumentation library for Python `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
+
+Counter, Gauge, Summary and Histogram.
+Daemon for easy but powerful stats aggregation
+
+
 
 ### Install
 
@@ -9,6 +17,7 @@ Clone the code repo to your local machine and enter the directory you created wi
 $ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
 ```
 
+Expected Output
 ```bash
 $ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
 Cloning into 'python_prometheus_graphite_examples'...
@@ -67,43 +76,6 @@ slow_count{endpoint="/database"} 6.0
 
 
 
-
-// Project name
-// Project description
-// Table of Contents
-// Installation
-## Installation
-- All the `code` required to get started
-- Images of what it should look like
-
-### Clone
-
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
-
-### Setup
-
-- If you want more syntax highlighting, format your code like this:
-
-> update and install this package first
-
-```shell
-$ brew update
-$ brew install fvcproductions
-```
-
-> now install npm and bower packages
-
-```shell
-$ npm install
-$ bower install
-```
-
-Usage
-Contributing
-License
-
-
-
 How do you know your application is running?
 
 How do you know your application is running at peak performance?
@@ -156,7 +128,6 @@ Graphite does not collect data. StatsD pushes the metrics via TCP or UDP, and Py
 
 
 
-This application uses python to create a Flask web application and three URL's. We used `prometheus_client` to add the counter: `requests` with the description: `Application Request Count`, and the label: `endpoint`. In this file, We also simulate an expensive database operation, tracking the start time and end time, and sending them to a histogram with `prometheus_client`. We also use StatsD to import a counter that increases by 1 for each request.
 
 **The first URL the prometheus-backed flask application**
 http://127.0.0.1:5000/ - Displays `Development Prometheus-backed Flash App`
