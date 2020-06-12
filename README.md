@@ -24,7 +24,7 @@ $ git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd
 
 **Expected Output**
 ```bash
-$ `git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
+$ git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples
 Cloning into 'python_prometheus_graphite_examples'...
 Warning: Permanently added the RSA host key for IP address '140.82.113.3' to the list of known hosts.
 remote: Enumerating objects: 1364, done.
