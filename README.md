@@ -1,5 +1,15 @@
 # Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)
 
+Clone
+
+### Install
+
+Clone the code repo to your local machine and enter the directory you created. 
+
+`git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples`
+
+
+
 **To run this code, clone the repo locally and run this command**
 ```bash
 FLASK_APP=web.py flask run
