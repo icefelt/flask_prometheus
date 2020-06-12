@@ -88,11 +88,8 @@ Graphite does not collect data. StatsD pushes the metrics via TCP or UDP, and Py
 
 ---------------------------------------------------------------------
 
-This is code is from _Monitoring and Logging_ Chapter of the 'Python for Devops' book by Noah Gift, Kennedy Behrman, Alfredo Deza, and Grig Gheorghiu.
-You can buy this book on Amazon here: https://www.amazon.com/Python-DevOps-Ruthlessly-Effective-Automation/dp/149205769X
+This code is from the _Monitoring and Logging_ chapter of the ["Python for DevOps"](https://www.amazon.com/Python-DevOps-Ruthlessly-Effective-Automation/dp/149205769X) book by Noah Gift, Kennedy Behrman, Alfredo Deza, and Grig Gheorghiu. [You can buy this book on Amazon](https://www.amazon.com/Python-DevOps-Ruthlessly-Effective-Automation/dp/149205769X)
 
-I used learnings from the _Monitoring Distributed Systems_ Chapter of Google's 'Site Reliability Engineering' book by Betsy Beyer, Chris Jones, Jennifer Petoff, and Niall Murphy.
-You can read it online here: https://landing.google.com/sre/sre-book/toc/
-You can buy this book from Amazon here: https://www.amazon.com/Site-Reliability-Engineering-Production-Systems/dp/149192912X/
+I used learnings from the _Monitoring Distributed Systems_ Chapter of Google's ["Site Reliability Engineering"](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/) book by Betsy Beyer, Chris Jones, Jennifer Petoff, and Niall Murphy. You can read it online here: [https://landing.google.com/sre/sre-book/toc/](https://landing.google.com/sre/sre-book/toc/). [You can also buy this book on Amazon](https://www.amazon.com/Site-Reliability-Engineering-Production-Systems/dp/149192912X/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
