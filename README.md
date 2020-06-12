@@ -9,7 +9,7 @@ This Python code creates a [Flask](https://palletsprojects.com/p/flask/) web app
 1. http://127.0.0.1:5000/database/ - Displays `Completed expensive database operation`
 1. http://127.0.0.1:5000/metrics/ - Displays list of application metrics, liek `total number of requests` and `number of slow database requests`
 
-This code also uses [StatsD](https://github.com/statsd/statsd) to push application metrics locally to [Graphite](https://graphiteapp.org/). 
+This code also uses [StatsD](https://github.com/statsd/statsd) to push application metrics to [Graphite](https://graphiteapp.org/). 
 
 ---------------------------------------------------------------------
 
