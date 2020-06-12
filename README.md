@@ -1,5 +1,42 @@
 # Python Application Monitoring examples using Graphite and StatsD for push services and Prometheus for pull services
 
+
+// Project name
+// Project description
+// Table of Contents
+// Installation
+## Installation
+- All the `code` required to get started
+- Images of what it should look like
+
+### Clone
+
+- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+
+### Setup
+
+- If you want more syntax highlighting, format your code like this:
+
+> update and install this package first
+
+```shell
+$ brew update
+$ brew install fvcproductions
+```
+
+> now install npm and bower packages
+
+```shell
+$ npm install
+$ bower install
+```
+
+Usage
+Contributing
+License
+
+
+
 How do you know your application is running?
 
 How do you know your application is running at peak performance?
