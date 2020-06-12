@@ -22,7 +22,7 @@ $ git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd
 
 ---------------------------------------------------------------------
 
-**Expected Output**
+**The expected outout includes**
 ```bash
 $ git clone git@github.com:icefelt/python_prometheus_graphite_examples.git && cd python_prometheus_graphite_examples
 Cloning into 'python_prometheus_graphite_examples'...
