@@ -1,4 +1,4 @@
-# ->Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)<-
+-># Python Application Monitoring examples using Graphite and StatsD (Push) and Prometheus (Pull)<-
 
 ---------------------------------------------------------------------
 
